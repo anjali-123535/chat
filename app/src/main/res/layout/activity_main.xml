@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chat.MainActivity">
+    <ListView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:stackFromBottom="true"
+        android:padding="3dp"
+        android:divider="@android:color/transparent"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/item_message"/>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="2dp"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:hint="Type a message...."
+          android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:drawablePadding="10dp"
+            android:inputType="textMultiLine"
+            android:drawableLeft="@drawable/ic_action_emoji"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/typemessage"
+            android:layout_toLeftOf="@id/sendButton"
+            />
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:focusable="true"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_name1" />
+        <!--app:civ_border_color="#fff"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="10"
+            app:civ_shadow_color="#8BC34A"-->
+
+    </RelativeLayout>
+</RelativeLayout>
